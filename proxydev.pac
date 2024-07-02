@@ -13,6 +13,15 @@ function FindProxyForURL(url, host) {
       return "DIRECT";
     }
   
-    // Proxy all
+    // No proxy for specific domains
+    if (
+      dnsDomainIs(host, "officeimg.vo.msecnd.net") ||
+      dnsDomainIs(host, "office.microsoft.com") ||
+      dnsDomainIs(host, "odc.officeapps.live.com")
+    ) {
+      return "DIRECT";
+    }
+
+    // Proxy all other requests
     return "HTTPS t20i3o7im5.proxy.cloudflare-gateway.com:443";
-  }
+}
