@@ -17,6 +17,19 @@ function FindProxyForURL(url, host) {
     if (
         shExpMatch(host, "*.com") ||
         shExpMatch(host, "*.net") ||
+        shExpMatch(host, "*.lync.com") ||
+        shExpMatch(host, "*.teams.microsoft.com") ||
+        shExpMatch(host, "teams.microsoft.com") ||
+        shExpMatch(host, "teams.microsoft.com") ||
+        shExpMatch(host, "*.keydelivery.mediaservices.windows.net") ||
+        shExpMatch(host, "*.streaming.mediaservices.windows.net") ||
+        shExpMatch(host, "mlccdn.blob.core.windows.net") ||
+        shExpMatch(host, "aka.ms") ||
+        shExpMatch(host, "*.users.storage.live.com") ||
+        shExpMatch(host, "adl.windows.com") ||
+        shExpMatch(host, "*.secure.skypeassets.com") ||
+        shExpMatch(host, "*.skype.com") ||
+        shExpMatch(host, "compass-ssl.microsoft.com")
     ) {
     return "DIRECT";
     }
