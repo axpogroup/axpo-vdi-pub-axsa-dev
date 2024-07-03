@@ -13,11 +13,21 @@ function FindProxyForURL(url, host) {
       return "DIRECT";
     }
   
-    // No proxy for specific domains
+    // No proxy for Teams Communications
     if (
-      dnsDomainIs(host, "officeimg.vo.msecnd.net") ||
-      dnsDomainIs(host, "office.microsoft.com") ||
-      dnsDomainIs(host, "odc.officeapps.live.com")
+      dnsDomainIs(host, "*.lync.com") ||
+      dnsDomainIs(host, "*.teams.microsoft.com") ||
+      dnsDomainIs(host, "teams.microsoft.com") ||
+      dnsDomainIs(host, "teams.microsoft.com") ||
+      dnsDomainIs(host, "*.keydelivery.mediaservices.windows.net") ||
+      dnsDomainIs(host, "*.streaming.mediaservices.windows.net") ||
+      dnsDomainIs(host, "mlccdn.blob.core.windows.net") ||
+      dnsDomainIs(host, "aka.ms") ||
+      dnsDomainIs(host, "*.users.storage.live.com") ||
+      dnsDomainIs(host, "adl.windows.com") ||
+      dnsDomainIs(host, "*.secure.skypeassets.com") ||
+      dnsDomainIs(host, "*.skype.com") ||
+      dnsDomainIs(host, "compass-ssl.microsoft.com")
     ) {
       return "DIRECT";
     }
