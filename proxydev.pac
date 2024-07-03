@@ -15,21 +15,10 @@ function FindProxyForURL(url, host) {
   
     // No proxy for Teams Communications
     if (
-      dnsDomainIs(host, "*.lync.com") ||
-      dnsDomainIs(host, "*.teams.microsoft.com") ||
-      dnsDomainIs(host, "teams.microsoft.com") ||
-      dnsDomainIs(host, "teams.microsoft.com") ||
-      dnsDomainIs(host, "*.keydelivery.mediaservices.windows.net") ||
-      dnsDomainIs(host, "*.streaming.mediaservices.windows.net") ||
-      dnsDomainIs(host, "mlccdn.blob.core.windows.net") ||
-      dnsDomainIs(host, "aka.ms") ||
-      dnsDomainIs(host, "*.users.storage.live.com") ||
-      dnsDomainIs(host, "adl.windows.com") ||
-      dnsDomainIs(host, "*.secure.skypeassets.com") ||
-      dnsDomainIs(host, "*.skype.com") ||
-      dnsDomainIs(host, "compass-ssl.microsoft.com")
+        shExpMatch(host, "*.com") ||
+        shExpMatch(host, "*.net") ||
     ) {
-      return "DIRECT";
+    return "DIRECT";
     }
 
     // Proxy all other requests
