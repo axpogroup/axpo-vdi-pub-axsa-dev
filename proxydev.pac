@@ -15,8 +15,6 @@ function FindProxyForURL(url, host) {
   
     // No proxy for Teams Communications
     if (
-        shExpMatch(host, "*.com") ||
-        shExpMatch(host, "*.net") ||
         shExpMatch(host, "*.lync.com") ||
         shExpMatch(host, "*.teams.microsoft.com") ||
         shExpMatch(host, "teams.microsoft.com") ||
