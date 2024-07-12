@@ -13,7 +13,7 @@ function FindProxyForURL(url, host) {
       return "DIRECT";
     }
 
-    // No proxy for Microsft 365
+    // No proxy for Microsft 365 and file share
     if (
         shExpMatch(host,"*.microsoft.com") ||
         shExpMatch(host,"*.msftidentity.com") ||
@@ -95,7 +95,8 @@ function FindProxyForURL(url, host) {
         shExpMatch(host,"*.cortana.ai") ||
         shExpMatch(host,"*.cloud.microsoft") ||
         shExpMatch(host,"*.static.microsoft") ||
-        shExpMatch(host,"*.usercontent.microsoft")
+        shExpMatch(host,"*.usercontent.microsoft") ||
+        shExpMatch(host,"*.file.core.windows.net")
     ) {
     return "DIRECT";
     }
