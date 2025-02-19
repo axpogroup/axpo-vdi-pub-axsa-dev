@@ -96,6 +96,7 @@ function FindProxyForURL(url, host) {
         shExpMatch(host,"*.cloud.microsoft") ||
         shExpMatch(host,"*.static.microsoft") ||
         shExpMatch(host,"*.usercontent.microsoft") ||
+        shExpMatch(host,"*.powerbi.com") ||
         shExpMatch(host,"*.file.core.windows.net")
     ) {
     return "DIRECT";
