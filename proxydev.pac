@@ -13,7 +13,7 @@ function FindProxyForURL(url, host) {
       return "DIRECT";
     }
 
-    // No proxy for Microsft 365 and file share
+    // No proxy for Microsoft 365 and file share
     if (
         shExpMatch(host,"*.microsoft.com") ||
         shExpMatch(host,"*.msftidentity.com") ||
