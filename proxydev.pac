@@ -16,7 +16,6 @@ function FindProxyForURL(url, host) {
     // No proxy for Microsoft 365 and file share
     if (
         shExpMatch(host,"*.microsoft.com") ||
-        shExpMatch(host,"*.onmicrosoft.com") ||
         shExpMatch(host,"*.msftidentity.com") ||
         shExpMatch(host,"*.msidentity.com") ||
         shExpMatch(host,"*.windowsazure.com") ||
